@@ -9,7 +9,6 @@ import { Routes } from './src/routes';
 
 export default function App() {
 
-
   LogBox.ignoreAllLogs();
   return (
     <View style={{flex: 1, backgroundColor: '#2F2F2F'}}>

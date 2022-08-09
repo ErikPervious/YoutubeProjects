@@ -20,8 +20,8 @@ export function AuthProvider({children}) {
     setLoading(true);
 
     await signInWithEmailAndPassword(auth, email, password)
-    .then(async () => {
-      const user = { name: name, email: email }
+    .then(async (value) => {
+      const user = { name: name, email: email, uid: value.user.uid }
       setUser(user);
       await SaveUser(user);
       setLoading(false);
@@ -35,7 +35,7 @@ export function AuthProvider({children}) {
 
     await createUserWithEmailAndPassword(auth, email, password)
     .then(async () => {
-      const user = { name: name, email: email }
+      const user = { name: name, email: email, uid: value.user.uid }
       setUser(user);
       await SaveUser(user);
       setLoading(false);

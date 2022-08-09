@@ -11,9 +11,13 @@ export const ContainerImage = styled.View`
   width: 80%;
   height: 350px;
   background-color: #52525C;
-  border-radius: 25;
+  border-radius: 25px;
   align-items: center;
   justify-content: center;
+  `;
+export const Image = styled.Image`
+  width: 80%;
+  height: 350px;
 `;
 export const ContainerUploadImage = styled.TouchableOpacity`
   align-items: center;
@@ -29,7 +33,7 @@ export const Button = styled.TouchableOpacity`
   margin-top: 10px;
   padding: 10px 15px;
   background-color: #FCCA3F;
-  border-radius: 7;
+  border-radius: 7px;
 `;
 export const ButtonText = styled.Text`
   color: #2F2F2F;
