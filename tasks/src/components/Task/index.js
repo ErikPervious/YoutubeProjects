@@ -4,27 +4,35 @@ import { Feather } from '@expo/vector-icons';
 import Swipeable from 'react-native-gesture-handler/Swipeable';
 
 import { styles } from "./styles";
+import { colors } from "../../styles/colors";
 
-function DeleteButton() {
-  return (
-    <TouchableOpacity style={styles.containerDelete}>
-      <Feather name="check-circle" size={35} color="#3B5368" />
-    </TouchableOpacity>
-  )
-}
-
-export function Task() {
+export function Task({data, action}) {
   return (
     <Swipeable
-      renderRightActions={() => <DeleteButton />}
+      renderRightActions={() => (
+        <TouchableOpacity 
+          style={styles.containerDelete}
+          onPress={() => action(data.id)}
+        >
+          <Feather 
+            name={data.isFinished ? 'trash-2' : 'check-circle'} 
+            size={35} 
+            color={data.isFinished ? colors.RED_PRIMARY : colors.BLUE_SECONDARY }
+          />
+        </TouchableOpacity>
+      )}
       containerStyle={{
         paddingHorizontal: 20,
         marginTop: 10
       }}
     >
-      <TouchableOpacity style={styles.container}>
-        <Text style={styles.title}>
-          Minha Primeira tarefa
+      <TouchableOpacity 
+        style={[styles.container,  data.isFinished && {backgroundColor: colors.GRAY_SECONDARY}]}
+      >
+        <Text 
+          style={[styles.title, data.isFinished && {color: colors.GRAY_PRIMARY}]}
+        >
+          {data?.content}
         </Text>
       </TouchableOpacity>
     </Swipeable>

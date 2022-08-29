@@ -4,8 +4,20 @@ import { Feather } from '@expo/vector-icons';
 
 import { styles } from "./styles";
 
-export function NewTask() {
+export function NewTask({addNewTask}) {
   const [task, setTask] = useState('');
+
+  function AddTaskAction() {
+    if(task === '') return;
+    
+    addNewTask(task);
+    setTask('');
+  };
+
+  function deleteTaskLetterByLetter() {
+    const taskTextReduced = task.substring(0, task.length - 1);
+    setTask(taskTextReduced);
+  };
 
   return (
     <View style={styles.container}>
@@ -19,13 +31,13 @@ export function NewTask() {
       <View style={styles.containerButtons}>
         <TouchableOpacity 
           style={styles.buttonClearTask}
-          onPress={() => {}}
+          onPress={deleteTaskLetterByLetter}
         >
           <Feather name="delete" size={30} color="#3B5368" />
         </TouchableOpacity>
         <TouchableOpacity 
           style={styles.buttonAddTask}
-          onPress={() => {}}
+          onPress={AddTaskAction}
         >
           <Text style={styles.buttonAddText}>ADICIONAR</Text>
         </TouchableOpacity>
