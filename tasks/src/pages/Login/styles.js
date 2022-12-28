@@ -61,5 +61,39 @@ export const styles = StyleSheet.create({
     color: colors.BLUE_PRIMARY,
     fontFamily: fonts.BOLD,
     fontSize: 18
+  },
+  containerMessage: {
+    zIndex: 999,
+    position: 'absolute',
+    bottom: 20,
+    width: '100%',
+    alignItems: "center",
+    justifyContent: "center"
+  },
+  containerMessageText: {
+    marginVertical: 10,
+    backgroundColor: colors.BLUE_SECONDARY,
+    borderRadius: 7,
+    width: '80%',
+    padding: 5
+  },
+  messageText: {
+    color: colors.BLUE_PRIMARY,
+    fontWeight: 'bold',
+    fontSize: 24,
+    textAlign: "center"
+  },
+  messageButton: {
+    padding: 10,
+    backgroundColor: colors.BLUE_SECONDARY,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 7,
+    width: '60%'
+  },
+  messageButtonText: {
+    colors: colors.BLUE_PRIMARY,
+    fontWeight: 'bold',
+    fontSize: 18
   }
 });

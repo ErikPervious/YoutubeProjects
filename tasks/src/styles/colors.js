@@ -4,7 +4,8 @@ const colors = {
   BLUE_TERTIARY: '#14212B',
   GRAY_PRIMARY: '#FBFBF850',
   GRAY_SECONDARY: '#12212B50',
-  RED_PRIMARY: '#7D030370'
+  RED_PRIMARY: '#7D030370',
+  WHITE_PRIMARY: '#FFFFFF'
 };
 
 export { colors };
