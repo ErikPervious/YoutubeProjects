@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "879718192144",
+    "project_id": "socialauthfb",
+    "storage_bucket": "socialauthfb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:879718192144:android:ae3e311734fc4e6e10a695",
+        "android_client_info": {
+          "package_name": "com.socialauthfb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "879718192144-151f9hgglhhb1gnk7n1713nacvjb85e2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.socialauthfb",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "879718192144-h8qcqnkfp6hd45ov82t59g6lecp31uc4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCm6RO1jp9_U1G5jUnZSJGN5QvLURXSK-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "879718192144-h8qcqnkfp6hd45ov82t59g6lecp31uc4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
